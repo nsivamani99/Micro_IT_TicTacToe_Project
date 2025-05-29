@@ -1,0 +1,79 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ffecd2, #fcb69f);
+  text-align: center;
+  padding: 30px;
+  color: #333;
+}
+h1 {
+  font-size: 2.8rem;
+  color: #111;
+  margin-bottom: 10px;
+}
+.controls {
+  margin-bottom: 10px;
+}
+#difficulty {
+  padding: 6px 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  background: #fff;
+  color: #333;
+}
+#restartBtn {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  background-color: #00b4d8;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  transition: background 0.3s ease;
+}
+#restartBtn:hover {
+  background-color: #0077b6;
+}
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-size: 1.2rem;
+  margin: 10px 0 20px;
+}
+#gameContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 10px;
+  margin: 0 auto 20px;
+  width: max-content;
+}
+.cell {
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+  animation: popIn 0.3s ease;
+}
+.cell:hover {
+  background-color: #ffedba;
+  transform: scale(1.05);
+}
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+} 
+#statusText {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
